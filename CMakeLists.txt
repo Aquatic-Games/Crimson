@@ -4,9 +4,12 @@ project(CrimsonEngine)
 set(CMAKE_CXX_STANDARD 20)
 
 add_library(CrimsonEngine STATIC
-        include/CrimsonEngine/Surface.cpp
+        src/Platform/Surface.cpp
         include/CrimsonEngine/Platform/Surface.h
-        include/CrimsonEngine/Core/CoreUtils.h)
+        include/CrimsonEngine/Core/CoreUtils.h
+        include/CrimsonEngine/Math/Size.h
+        src/Platform/SDL3/SDL3Surface.cpp
+        src/Platform/SDL3/SDL3Surface.h)
 
 target_include_directories(CrimsonEngine PUBLIC include)
 
